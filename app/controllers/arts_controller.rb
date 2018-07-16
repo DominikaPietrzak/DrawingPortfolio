@@ -11,7 +11,7 @@ class ArtsController < ApplicationController
   end
 
   def edit
-
+    @art = Art.find(params[:id])
   end
 
   def show

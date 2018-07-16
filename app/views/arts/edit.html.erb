@@ -1,0 +1,20 @@
+<%= form_for @art, html: { multipart: true} do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %></br>
+
+  <%= f.label :tag1 %>
+  <%= f.text_field :tag1 %></br>
+
+  <%= f.label :tag2 %>
+  <%= f.text_field :tag2 %></br>
+
+  <%= f.label :tag3 %>
+  <%= f.text_field :tag3 %></br>
+
+  <%= f.label :image %>
+  <%= f.file_field :imageart %></br>
+
+  <%= f.submit %>
+
+<% end %>
