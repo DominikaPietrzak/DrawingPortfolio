@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180716142254) do
+ActiveRecord::Schema.define(version: 20180716151727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 20180716142254) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_comic_books_on_user_id"
   end
 
   create_table "comic_chapters", force: :cascade do |t|
@@ -73,6 +75,7 @@ ActiveRecord::Schema.define(version: 20180716142254) do
   end
 
   add_foreign_key "arts", "users"
+  add_foreign_key "comic_books", "users"
   add_foreign_key "comic_chapters", "comic_books"
   add_foreign_key "comic_pages", "comic_chapters"
 end
