@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ComicsPageTest < ActiveSupport::TestCase
+class ComicBookTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

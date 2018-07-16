@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180716113311) do
+ActiveRecord::Schema.define(version: 20180716134521) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,30 +30,18 @@ ActiveRecord::Schema.define(version: 20180716113311) do
     t.index ["user_id"], name: "index_arts_on_user_id"
   end
 
-  create_table "chapters", force: :cascade do |t|
-    t.bigint "comics_id"
-    t.integer "number"
-    t.string "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["comics_id"], name: "index_chapters_on_comics_id"
-  end
-
-  create_table "comics", force: :cascade do |t|
+  create_table "comic_books", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "comics_pages", force: :cascade do |t|
-    t.bigint "chapter_id"
-    t.integer "number"
-    t.string "tag1"
-    t.string "tag2"
-    t.string "tag3"
+  create_table "comic_chapters", force: :cascade do |t|
+    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["chapter_id"], name: "index_comics_pages_on_chapter_id"
+    t.bigint "comic_book_id"
+    t.index ["comic_book_id"], name: "index_comic_chapters_on_comic_book_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -74,6 +62,5 @@ ActiveRecord::Schema.define(version: 20180716113311) do
   end
 
   add_foreign_key "arts", "users"
-  add_foreign_key "chapters", "comics", column: "comics_id"
-  add_foreign_key "comics_pages", "chapters"
+  add_foreign_key "comic_chapters", "comic_books"
 end
