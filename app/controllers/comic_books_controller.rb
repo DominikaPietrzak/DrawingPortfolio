@@ -5,8 +5,10 @@ class ComicBooksController < ApplicationController
   end
 
   def show
-    @comic_book = ComicBook.find(params[:id])
-    @comic_chapters = @comic_book.comic_chapters
+    @chapter = ComicChapter.find_by(id: params[:id])
+    @comic = ComicBook.find_by(id: @chapter.comic_book_id)
+    # @chapter = ComicChapter.find_by(id: params[:id])
+    # @comic = ComicBook.find_by(id: @chapter.comic_book_id)
   end
 
   def new
