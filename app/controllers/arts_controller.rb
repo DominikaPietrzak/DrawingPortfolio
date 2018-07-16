@@ -23,6 +23,12 @@ class ArtsController < ApplicationController
     @art.save
   end
 
+  def destroy
+
+    @art = Art.find(params[:id])
+    @art.destroy
+  end
+
 
   private
 
