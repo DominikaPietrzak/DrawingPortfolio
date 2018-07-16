@@ -1,8 +1,13 @@
 test arts index
-<%= @arts.each do |art| %>
+</br>
+<% @arts.each do |art| %>
   <%= art.id %>
-  <%= art.title %>
+  <%= image_tag art.imageart.url(:thumb) %>
+  <%= art.name %>
   <%= art.tag1 %>
   <%= art.tag2 %>
   <%= art.tag3 %>
+  <%= link_to 'Edit', edit_art_path(art) %>
+  <%= link_to 'Delete', art_path(art), method: :delete %>
+  </br>
 <% end %>
