@@ -6,6 +6,7 @@ class ComicBooksController < ApplicationController
 
   def show
     @comic_book = ComicBook.find(params[:id])
+    @comic_chapters = @comic_book.comic_chapters
   end
 
   def new

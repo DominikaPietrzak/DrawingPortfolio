@@ -1,0 +1,8 @@
+</br>
+<%= @comic_book.title %>
+<% @comic_chapters.each do |chapter| %>
+<%= chapter.title %>
+<%= link_to "Show chapter", comic_chapter_path(chapter) %>
+<%= link_to "Edit", edit_comic_chapter_path(chapter) %>
+<%= link_to "Destroy", comic_chapter_path(chapter), method: :delete %>
+<% end %>
