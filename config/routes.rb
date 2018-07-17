@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :arts
   resources :comic_books
   resources :comic_chapters
+  resources :comic_pages
 end
