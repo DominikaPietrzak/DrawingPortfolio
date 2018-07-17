@@ -1,8 +1,7 @@
 class ComicChaptersController < ApplicationController
 
   def index
-    @comic_book = ComicBook.find_by(params[:id])
-    @chapters = ComicChapter.where(comic_book_id: @comic_book)
+    @chapters = ComicChapter.all
   end
 
   def new
@@ -11,7 +10,8 @@ class ComicChaptersController < ApplicationController
   end
 
   def show
-    
+    @chapter = ComicChapter.find(params[:id])
+
   end
 
 end

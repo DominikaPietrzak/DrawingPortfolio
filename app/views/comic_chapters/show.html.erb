@@ -1,5 +1,8 @@
 </br>
-<%= @comic.title %></br>
-<%= @chapter.each do |chapter| %>
-  <%= chapter.title %>
-<% end %>
+
+  <%= @chapter.id %>
+  <%= @chapter.number %>
+  <%= @chapter.title %>
+  <% bookId = @chapter.comic_book_id %>
+  <% comic = ComicBook.find_by(id: bookId) %>
+  <%= comic.title %>

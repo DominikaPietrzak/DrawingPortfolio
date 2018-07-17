@@ -1,0 +1,14 @@
+</br>
+<h2>Wszystkie rozdziały </h2>
+<% @chapters.each do |chapter| %>
+
+  <%= chapter.number %>
+  <%= chapter.title %>
+  <% bookId = chapter.comic_book_id %>
+  <% comic = ComicBook.find_by(id: bookId) %>
+  <%= comic.title %>
+  <%= link_to "Show", comic_chapter_path(chapter) %>
+  <%= link_to "Edit", edit_comic_chapter_path(chapter) %>
+  <%= link_to "Destroy", comic_chapter_path(chapter), method: :delete %>
+</br>
+<% end %>
