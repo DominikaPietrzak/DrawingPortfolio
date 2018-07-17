@@ -1,6 +1,7 @@
 <%= @pages.each do |page| %>
   <%= page.number %>
-  <% chapterId = page.comic_chapter.id %>
+  <% chapterId = page.comic_chapter_id %>
+  
   <% chapter = ComicChapter.find_by(id: chapterId) %>
   <%= chapter.name %>
   <% comic = ComicBook.find_by(id: chapter.comic_book_id) %>
