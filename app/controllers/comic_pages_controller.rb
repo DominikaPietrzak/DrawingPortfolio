@@ -7,7 +7,7 @@ class ComicPagesController < ApplicationController
   end
 
   def new
-    @page = current_user.comic_pages.build
+    @comic_page = current_user.comic_pages.build
   end
 
   def edit
@@ -15,16 +15,18 @@ class ComicPagesController < ApplicationController
   end
 
   def show
-    @page = ComicPage.find(prams[:id])
+    @page = ComicPage.find(params[:id])
   end
 
   def create
-    @page = current_user.comic_pages.build(page_params)
-    @page.save
+    @comic_page = current_user.comic_pages.build(page_params)
+
+    @comic_page.save!
+    redirect_to art_path
   end
 
   private
   def page_params
-    params.require(:page).permit(:comicimage, :number, :tag1, :tag2, :tag3)
+    params.require(:comic_page).permit(:comicimage, :number, :tag1, :tag2, :tag3, :comic_chapter_id)
   end
 end

@@ -1,9 +1,18 @@
-<%= @pages.each do |page| %>
+</br>
+<% @pages.each do |page| %>
+  <%= page.id %>
   <%= page.number %>
+  <%= image_tag page.comicimage.url(:thumb) %>
   <% chapterId = page.comic_chapter_id %>
-  
   <% chapter = ComicChapter.find_by(id: chapterId) %>
-  <%= chapter.name %>
+  <%= chapter.title %>
   <% comic = ComicBook.find_by(id: chapter.comic_book_id) %>
   <%= comic.title %>
+  <%= page.tag1 %>
+  <%= page.tag2 %>
+  <%= page.tag3 %>
+  <%= link_to 'Show', comic_page_path(page) %>
+  <%= link_to 'Edit', edit_comic_page_path(page) %>
+  <%= link_to 'Delete', comic_page_path(page), method: :delete %>
+</br>
 <% end %>
