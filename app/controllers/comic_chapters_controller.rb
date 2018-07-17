@@ -11,6 +11,7 @@ class ComicChaptersController < ApplicationController
   end
 
   def show
+    
   end
 
 end
