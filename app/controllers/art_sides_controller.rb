@@ -1,0 +1,2 @@
+class ArtSidesController < ApplicationController
+end

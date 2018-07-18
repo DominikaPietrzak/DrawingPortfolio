@@ -1,0 +1,2 @@
+class ComicSidesController < ApplicationController
+end

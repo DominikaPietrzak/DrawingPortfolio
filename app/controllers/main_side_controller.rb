@@ -1,0 +1,2 @@
+class MainSideController < ApplicationController
+end

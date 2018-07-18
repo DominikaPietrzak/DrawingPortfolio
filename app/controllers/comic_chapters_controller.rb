@@ -28,6 +28,7 @@ class ComicChaptersController < ApplicationController
     @comic_chapter = ComicChapter.find(params[:id])
     @comic_chapter.destroy
   end
+
   private
 
   def chapter_params
