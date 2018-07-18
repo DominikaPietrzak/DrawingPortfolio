@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :comic_chapters
   resources :comic_pages
   root to: 'comic_books#index'
+  get 'dayritual', to: 'main_side#index'
 end
