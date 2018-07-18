@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180718084551) do
+ActiveRecord::Schema.define(version: 20180718144511) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,10 @@ ActiveRecord::Schema.define(version: 20180718084551) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.string "comiccover_file_name"
+    t.string "comiccover_content_type"
+    t.integer "comiccover_file_size"
+    t.datetime "comiccover_updated_at"
     t.index ["user_id"], name: "index_comic_books_on_user_id"
   end
 
