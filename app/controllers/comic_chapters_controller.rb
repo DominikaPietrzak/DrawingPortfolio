@@ -32,6 +32,6 @@ class ComicChaptersController < ApplicationController
   private
 
   def chapter_params
-    params.require(:comic_chapter).permit(:title, :number, :comic_book_id)
+    params.require(:comic_chapter).permit(:title, :number, :comic_book_id, :chaptercover)
   end
 end

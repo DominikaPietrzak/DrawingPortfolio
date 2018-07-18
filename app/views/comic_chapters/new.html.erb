@@ -1,6 +1,6 @@
 <h2> New chapter </h2>
 </br>
-<%= form_for @comic_chapter do |f| %>
+<%= form_for @comic_chapter, html: { multipart: true} do |f| %>
 
   <%= f.label :title %>
   <%= f.text_field :title %> </br>
@@ -10,6 +10,9 @@
 
   <%= f.label :comic_book_id %><span> id </span>
   <%= f.text_field :comic_book_id %></br>
+
+  <%= f.label :cover %>
+  <%= f.file_field :chaptercover %></br>
 
   <%= f.submit %>
 
