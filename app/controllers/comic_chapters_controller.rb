@@ -12,6 +12,7 @@ class ComicChaptersController < ApplicationController
 
   def show
     @chapter = ComicChapter.find(params[:id])
+    @pages =  ComicPage.where(comic_chapter_id: @chapter.id)
   end
 
   def create

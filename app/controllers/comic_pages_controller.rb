@@ -22,7 +22,7 @@ class ComicPagesController < ApplicationController
     @comic_page = current_user.comic_pages.build(page_params)
 
     @comic_page.save!
-    redirect_to art_path
+    redirect_to arts_path
   end
 
   private
