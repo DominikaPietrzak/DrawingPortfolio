@@ -11,7 +11,7 @@ class ComicPagesController < ApplicationController
   end
 
   def edit
-    @page = ComicPage.find(params[:id])
+    @comic_page = ComicPage.find(params[:id])
   end
 
   def show

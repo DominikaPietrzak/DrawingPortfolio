@@ -1,0 +1,16 @@
+<h2> Edit chapter </h2>
+</br>
+<%= form_for @comic_chapter do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %> </br>
+
+  <%= f.label :number %>
+  <%= f.text_field :number %></br>
+
+  <%= f.label :comic_book_id %><span> id </span>
+  <%= f.text_field :comic_book_id %></br>
+
+  <%= f.submit %>
+
+<% end %>

@@ -19,6 +19,9 @@ class ComicChaptersController < ApplicationController
     @comic_chapter.save
   end
 
+  def edit
+    @comic_chapter = ComicChapter.find(params[:id])
+  end
   private
 
   def chapter_params
