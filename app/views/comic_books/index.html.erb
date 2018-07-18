@@ -2,5 +2,7 @@
 <%  @comic_books.each do |comic| %>
   <%= comic.title %>
   <%= link_to 'Show', comic_book_path(comic) %>
+  <%= link_to 'Edit', edit_comic_book_path(comic) %>
+  <%= link_to 'Delete', comic_book_path(comic), method: :delete %>
 </br>
 <% end %>

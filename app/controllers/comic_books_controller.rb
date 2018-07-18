@@ -27,6 +27,10 @@ before_action :authenticate_user!
     @comic_book.save
   end
 
+  def edit
+    @comic_book = ComicBook.find(params[:id])
+  end
+
   private
 
   def comic_params
