@@ -1,6 +1,10 @@
 <h2>Newest comics </h2>
 
 <h2>Newsest chapters </h2>
+<% @chapters.each do |chapter| %>
+  <%= chapter.title %>
+  </br>
+<% end %>
 <h2>Newest pages </h2>
 <% @pages.each do |page| %>
   <%= image_tag page.comicimage.url(:medium) %>
