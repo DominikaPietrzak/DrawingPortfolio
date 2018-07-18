@@ -25,6 +25,11 @@ class ComicPagesController < ApplicationController
     redirect_to arts_path
   end
 
+  def destroy
+    @comic_page = ComicPage.find(params[:id])
+    @comic_page.destroy
+  end
+
   private
   def page_params
     params.require(:comic_page).permit(:comicimage, :number, :tag1, :tag2, :tag3, :comic_chapter_id)
