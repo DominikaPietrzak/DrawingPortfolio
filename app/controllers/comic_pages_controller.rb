@@ -4,6 +4,7 @@ class ComicPagesController < ApplicationController
 
   def index
     @pages = ComicPage.all
+    @comic_page = current_user.comic_pages.build
   end
 
   def new

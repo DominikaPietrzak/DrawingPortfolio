@@ -1,0 +1,23 @@
+<%= form_for @comic_page, html: { multipart: true} do |f| %>
+
+  <%= f.label :number %>
+  <%= f.text_field :number %></br>
+
+  <%= f.label :tag1 %>
+  <%= f.text_field :tag1 %></br>
+
+  <%= f.label :tag2 %>
+  <%= f.text_field :tag2 %></br>
+
+  <%= f.label :tag3 %>
+  <%= f.text_field :tag3 %></br>
+
+  <%= f.label :chapter %>
+  <%= f.text_field :comic_chapter_id %></br>
+
+  <%= f.label :comicimage %>
+  <%= f.file_field :comicimage %></br>
+
+  <%= f.submit %>
+
+<% end %>
