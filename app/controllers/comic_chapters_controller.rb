@@ -4,6 +4,7 @@ class ComicChaptersController < ApplicationController
 
   def index
     @chapters = ComicChapter.all
+    @comic_chapter =current_user.comic_chapters.build
   end
 
   def new
@@ -18,6 +19,7 @@ class ComicChaptersController < ApplicationController
   def create
     @comic_chapter = current_user.comic_chapters.build(chapter_params)
     @comic_chapter.save
+    redirect_back(fallback_location: comic_chapters_url)
   end
 
   def edit

@@ -1,9 +1,8 @@
-<h2> New chapter </h2>
 </br>
 <%= form_for @comic_chapter, html: { multipart: true} do |f| %>
 
   <%= f.label :title %>
-  <%= f.text_field :title %> </br>
+  <%= f.text_field :title %></br>
 
   <%= f.label :number %>
   <%= f.text_field :number %></br>
@@ -17,5 +16,3 @@
   <%= f.submit %>
 
 <% end %>
-</br>
-<%= link_to 'Back', comic_chapters_path %>
