@@ -23,7 +23,7 @@ class ComicPagesController < ApplicationController
     @comic_page = current_user.comic_pages.build(page_params)
 
     @comic_page.save!
-    redirect_to arts_path
+    redirect_to comic_pages_path
   end
 
   def destroy
