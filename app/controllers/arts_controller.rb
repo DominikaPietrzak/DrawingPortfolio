@@ -3,7 +3,9 @@ class ArtsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @art = current_user.arts.build
     @arts = Art.all
+
   end
 
   def new
@@ -21,6 +23,7 @@ class ArtsController < ApplicationController
   def create
     @art = current_user.arts.build(art_params)
     @art.save
+    redirect_back(fallback_location: arts_url)
   end
 
   def destroy

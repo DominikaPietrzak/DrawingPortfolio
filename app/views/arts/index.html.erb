@@ -1,6 +1,8 @@
 </br>
 <h1> Wszystkie arty </h1> </br>
 </br>
+<%= render 'art_form' %>
+</br>
 <% @arts.each do |art| %>
   <%= art.id %>
   <%= image_tag art.imageart.url(:thumb) %>
