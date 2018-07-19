@@ -31,10 +31,21 @@ before_action :authenticate_user!
     @comic_book = ComicBook.find(params[:id])
   end
 
+  def update
+    @comic_book = ComicBook.find(params[:id])
+    if @comic_book.update_attributes(comic_params)
+      flash[:success] = "ComicBook updated"
+      redirect_to @comic_book
+    else
+      render 'edit'
+    end
+  end
+
+
   private
 
   def comic_params
-    params.require(:comic_book).permit(:title)
+    params.require(:comic_book).permit(:title, :comiccover)
   end
 
 end

@@ -1,7 +1,7 @@
 </br>
 <h2>Wszystkie rozdziały </h2>
 <% @chapters.each do |chapter| %>
-
+  <%= image_tag chapter.chaptercover.url(:thumb) %>
   <%= chapter.number %>
   <%= chapter.title %>
   <% bookId = chapter.comic_book_id %>

@@ -30,6 +30,16 @@ class ComicPagesController < ApplicationController
     @comic_page.destroy
   end
 
+  def update
+    @comic_page = ComicPage.find(params[:id])
+    if @comic_page.update_attributes(page_params)
+      flash[:success] = "Profile updated"
+      redirect_to @comic_page
+    else
+      render 'edit'
+    end
+  end
+
   private
   def page_params
     params.require(:comic_page).permit(:comicimage, :number, :tag1, :tag2, :tag3, :comic_chapter_id)

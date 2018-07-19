@@ -29,9 +29,23 @@ class ComicChaptersController < ApplicationController
     @comic_chapter.destroy
   end
 
-  private
+  def update
+
+    @comic_chapter = ComicChapter.find(params[:id])
+    @comic_chapter.update_attributes(chapter_params_with_user_id)
+    flash[:success] = "Chapter updated"
+    redirect_to @comic_chapter
+  end
+
+
 
   def chapter_params
     params.require(:comic_chapter).permit(:title, :number, :comic_book_id, :chaptercover)
   end
+
+  def chapter_params_with_user_id
+    user_params = {user_id: current_user.id}
+    params.require(:comic_chapter).permit(:title, :number, :comic_book_id, :chaptercover).merge(user_params)
+  end
+
 end

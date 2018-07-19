@@ -1,6 +1,6 @@
 <h2> Edit chapter </h2>
 </br>
-<%= form_for @comic_chapter, , html: { multipart: true} do |f| %>
+<%= form_for @comic_chapter, html: { multipart: true} do |f| %>
 
   <%= f.label :title %>
   <%= f.text_field :title %> </br>
