@@ -1,7 +1,9 @@
 </br>
+<%= render 'comic_book_form' %>
+
 <%  @comic_books.each do |comic| %>
-  <%= comic.title %>
   <%= image_tag comic.comiccover.url(:thumb) %>
+  <%= comic.title %>
   <%= link_to 'Show', comic_book_path(comic) %>
   <%= link_to 'Edit', edit_comic_book_path(comic) %>
   <%= link_to 'Delete', comic_book_path(comic), method: :delete %>

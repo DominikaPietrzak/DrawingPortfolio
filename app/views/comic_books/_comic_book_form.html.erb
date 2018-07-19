@@ -1,0 +1,13 @@
+</br>
+<%= form_for @comic_book, html: { multipart: true}  do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %></br>
+
+  <%= f.label :comiccover %>
+  <%= f.file_field :comiccover %></br>
+
+  <%= f.submit %>
+
+<% end %>
+</br>

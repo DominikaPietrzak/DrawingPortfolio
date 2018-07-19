@@ -4,6 +4,7 @@ before_action :authenticate_user!
 
   def index
     @comic_books = ComicBook.all
+    @comic_book = current_user.comic_books.build
   end
 
   def show
