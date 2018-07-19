@@ -1,6 +1,7 @@
 </br>
-  Chapter id
-  <%= @chapter.id %>
+
+  <%= image_tag @chapter.chaptercover.url(:thumb)%>
+  Chapter id: <%= @chapter.id %>
   <%= @chapter.number %>
   <%= @chapter.title %>
   <% bookId = @chapter.comic_book_id %>

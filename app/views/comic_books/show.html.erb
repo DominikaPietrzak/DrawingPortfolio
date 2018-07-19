@@ -2,7 +2,7 @@
 <%= @comic.title %>
 </br>
 <% @chapters.each do |chapter| %>
-
+  <%= image_tag chapter.chaptercover.url(:thumb) %>
   <%= chapter.number %>
   <%= chapter.title %>
   <%= link_to "Show ", comic_chapter_path(chapter) %>
