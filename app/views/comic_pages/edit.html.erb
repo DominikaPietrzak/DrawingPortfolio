@@ -1,4 +1,4 @@
-<h1> Edytuj sttronę komiksu </h1>
+<h1> Edytuj stronę komiksu </h1>
 
 <%= form_for @comic_page, html: { multipart: true} do |f| %>
 
@@ -23,3 +23,6 @@
   <%= f.submit %>
 
 <% end %>
+
+</br>
+<%= link_to 'Back', comic_pages_path %>
