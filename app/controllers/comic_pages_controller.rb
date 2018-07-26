@@ -5,10 +5,12 @@ class ComicPagesController < ApplicationController
   def index
     @pages = ComicPage.all
     @comic_page = current_user.comic_pages.build
+    @comic_chapters = current_user.comic_chapters.all
   end
 
   def new
     @comic_page = current_user.comic_pages.build
+      @comic_chapters = current_user.comic_chapters.all
   end
 
   def edit

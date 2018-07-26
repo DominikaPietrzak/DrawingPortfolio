@@ -13,7 +13,7 @@
   <%= f.text_field :tag3 %></br>
 
   <%= f.label :chapter %>
-  <%= f.text_field :comic_chapter_id %></br>
+  <%= f.collection_select :comic_chapter_id, @comic_chapters, :id, :title, include_blank: true %></br>
 
   <%= f.label :comicimage %>
   <%= f.file_field :comicimage %></br>
