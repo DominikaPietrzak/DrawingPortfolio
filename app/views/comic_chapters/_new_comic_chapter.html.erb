@@ -7,8 +7,8 @@
   <%= f.label :number %>
   <%= f.text_field :number %></br>
 
-  <%= f.label :comic_book_id %><span> id </span>
-  <%= f.text_field :comic_book_id %></br>
+  <%= f.label :comic_book_title %><span> id </span>
+  <%= f.collection_select :comic_book_id, @comics, :id, :title, include_blank: true %> </br>
 
   <%= f.label :cover %>
   <%= f.file_field :chaptercover %></br>

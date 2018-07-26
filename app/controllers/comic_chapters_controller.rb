@@ -4,12 +4,14 @@ class ComicChaptersController < ApplicationController
 
   def index
     @chapters = ComicChapter.all
-    @comic_chapter =current_user.comic_chapters.build
+    @comic_chapter = current_user.comic_chapters.build
+    @comics = ComicBook.all
   end
 
   def new
     @comic_chapter = current_user.comic_chapters.build
     @comics = ComicBook.all
+
   end
 
   def show
