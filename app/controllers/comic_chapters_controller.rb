@@ -9,6 +9,7 @@ class ComicChaptersController < ApplicationController
 
   def new
     @comic_chapter = current_user.comic_chapters.build
+    @comics = ComicBook.all
   end
 
   def show

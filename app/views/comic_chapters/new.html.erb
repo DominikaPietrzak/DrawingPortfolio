@@ -1,4 +1,4 @@
-<h2> New chapter </h2>
+ls<h2> New chapter </h2>
 </br>
 <%= form_for @comic_chapter, html: { multipart: true} do |f| %>
 
@@ -8,8 +8,10 @@
   <%= f.label :number %>
   <%= f.text_field :number %></br>
 
-  <%= f.label :comic_book_id %><span> id </span>
-  <%= f.text_field :comic_book_id %></br>
+  <%= f.label :comic_book_title %><span>  </span>
+  <%= f.collection_select :comic_book_id, @comics, :id,:title, include_blank: true %>
+
+  </br>
 
   <%= f.label :cover %>
   <%= f.file_field :chaptercover %></br>
@@ -17,5 +19,6 @@
   <%= f.submit %>
 
 <% end %>
+
 </br>
 <%= link_to 'Back', comic_chapters_path %>
