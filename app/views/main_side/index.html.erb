@@ -1,64 +1,66 @@
-<div class = "comics">
-  <h2>Newest comics </h2>
-  <div class ="row">
-    <div class = "column">
-      <% @comics.each do |comic| %>
-        <%= image_tag comic.comiccover.url(:medium) %>
+<div class = "container">
+  <div class = "comics">
+    <h2>Newest comics </h2>
+    <div class ="row">
+      <div class = "column">
+        <% @comics.each do |comic| %>
+          <%= image_tag comic.comiccover.url(:medium) %>
+          <% end %>
+      </div>
+      <div class = "column">
+        <% @comics2.each do |comic| %>
+          <%= image_tag comic.comiccover.url(:medium) %>
         <% end %>
-    </div>
-    <div class = "column">
-      <% @comics2.each do |comic| %>
-        <%= image_tag comic.comiccover.url(:medium) %>
-      <% end %>
-    </div>
-    <div class = "column">
-      <% @comics3.each do |comic| %>
-        <%= image_tag comic.comiccover.url(:medium) %>
-      <% end %>
+      </div>
+      <div class = "column">
+        <% @comics3.each do |comic| %>
+          <%= image_tag comic.comiccover.url(:medium) %>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
 
-<div class = "chapters">
-  <h2>Newsest chapters </h2>
-  <div class= "row">
-    <div class= "column">
-      <% @chapters.each do |chapter| %>
-        <%= image_tag chapter.chaptercover.url(:thumb) %>
-      <% end %>
-    </div>
+  <div class = "chapters">
+    <h2>Newsest chapters </h2>
+    <div class= "row">
+      <div class= "column">
+        <% @chapters.each do |chapter| %>
+          <%= image_tag chapter.chaptercover.url(:medium) %>
+        <% end %>
+      </div>
 
-    <div class= "column">
-      <% @chapters2.each do |chapter| %>
-        <%= image_tag chapter.chaptercover.url(:thumb) %>
-      <% end %>
-    </div>
+      <div class= "column">
+        <% @chapters2.each do |chapter| %>
+          <%= image_tag chapter.chaptercover.url(:medium) %>
+        <% end %>
+      </div>
 
-    <div class= "column">
-      <% @chapters3.each do |chapter| %>
-        <%= image_tag chapter.chaptercover.url(:thumb) %>
-      <% end %>
+      <div class= "column">
+        <% @chapters3.each do |chapter| %>
+          <%= image_tag chapter.chaptercover.url(:medium) %>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
-<div class = "pages" >
-  <h2>Newest pages </h2>
-  <div class = "row">
-    <div class = "column">
-      <% @pages.each do |page| %>
-        <%= image_tag page.comicimage.url(:medium) %>
-      <% end %>
-    </div>
-
-    <div class = "column">
-      <% @pages2.each do |page| %>
-        <%= image_tag page.comicimage.url(:medium) %>
-      <% end %>
-    </div>
-    <div class = "column">
-      <% @pages3.each do |page| %>
-        <%= image_tag page.comicimage.url(:medium) %>
+  <div class = "pages" >
+    <h2>Newest pages </h2>
+    <div class = "row">
+      <div class = "column">
+        <% @pages.each do |page| %>
+          <%= image_tag page.comicimage.url(:medium) %>
         <% end %>
+      </div>
+
+      <div class = "column">
+        <% @pages2.each do |page| %>
+          <%= image_tag page.comicimage.url(:medium) %>
+        <% end %>
+      </div>
+      <div class = "column">
+        <% @pages3.each do |page| %>
+          <%= image_tag page.comicimage.url(:medium) %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
