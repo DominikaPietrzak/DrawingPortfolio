@@ -27,7 +27,7 @@ body {
   // margin: auto;
 }
 
-img {
+div.column img {
   width: 100%;
   filter: none;
   margin: none;
@@ -38,8 +38,10 @@ img {
 
 img:hover {
   filter:blur(2px);
+  display: flex;
+  flex-flow: column;
 }
-img
+
 .column img {
   margin-top: 0px;
   vertical-align: middle;

@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   resources :comic_pages
   root to: 'main_side#index'
   get 'dayritual', to: 'main_side#index'
+  get 'dayritual/comics', to: 'comic_sides#index'
+  get 'dayritual/pages', to: 'comic_page_sides#index'
+  get 'dayritual/arts', to: 'art_sides#index'
 end

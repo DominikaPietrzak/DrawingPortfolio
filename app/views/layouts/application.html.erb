@@ -12,7 +12,13 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render 'layouts/left_menu' %>
+    <% if current_user %>
+      <%= render 'layouts/default_menu' %></br>
+      <%= render 'layouts/admin_menu' %>
+    <% else %>
+      <%= render 'layouts/admin_menu' %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
