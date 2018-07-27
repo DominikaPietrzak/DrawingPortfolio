@@ -1,6 +1,6 @@
 <div class = "container">
   <div class = "comics">
-    <h2>Newest comics </h2>
+    <h1>Comics </h1>
     <div class ="row">
       <div class = "column">
         <% @comics.each do |comic| %>
@@ -21,7 +21,7 @@
   </div>
 
   <div class = "chapters">
-    <h2>Newsest chapters </h2>
+
     <div class= "row">
       <div class= "column">
         <% @chapters.each do |chapter| %>
@@ -42,23 +42,26 @@
       </div>
     </div>
   </div>
-  <div class = "pages" >
-    <h2>Newest pages </h2>
+  <div class = "arts" >
+    <h1>Arts </h1>
+    <hr>
+
     <div class = "row">
+
       <div class = "column">
-        <% @pages.each do |page| %>
-          <%= image_tag page.comicimage.url(:medium) %>
+        <% @arts.each do |art| %>
+          <%= image_tag art.imageart.url(:medium) %>
         <% end %>
       </div>
 
       <div class = "column">
-        <% @pages2.each do |page| %>
-          <%= image_tag page.comicimage.url(:medium) %>
+        <% @arts2.each do |art| %>
+          <%= image_tag art.imageart.url(:medium) %>
         <% end %>
       </div>
       <div class = "column">
-        <% @pages3.each do |page| %>
-          <%= image_tag page.comicimage.url(:medium) %>
+        <% @arts3.each do |art| %>
+          <%= image_tag art.imageart.url(:medium) %>
         <% end %>
       </div>
     </div>

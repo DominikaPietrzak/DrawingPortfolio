@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .container {
-  margin: 20px;
+  margin: 45px;
   text-align: center;
 }
 .comics, .pages, .chapters {
@@ -35,7 +35,7 @@ div.column img {
 
 }
 
-img:hover {
+div.column.img:hover {
   filter:blur(2px);
   display: flex;
   flex-flow: column;
