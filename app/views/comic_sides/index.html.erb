@@ -1,4 +1,5 @@
 </br>
 <% @comics.each do |comic| %>
-  <%= comic.title %> </br>
+  <%= link_to comic.title, comic_sides_with_title_path(comic, :title => comic.title) %>
+</br>
 <% end %>
