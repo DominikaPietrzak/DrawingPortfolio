@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'comic_chapter_sides/index'
+
+  get 'comic_chapter_sides/show'
+
   devise_for :users
   resources :arts
   resources :comic_books
