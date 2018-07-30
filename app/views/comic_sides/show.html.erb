@@ -1,5 +1,12 @@
-<% @chapters.each do |chapter| %>
-  <%= chapter.number %>
-  <%= chapter.title %>
+<% if @chapter %>
+  <% @chapters.each do |chapter| %>
+    <%= chapter.number %>
+    <% pages = ComicPage.where(comic_chapter_id: chapter.id) %>
+    <% @firstPage = pages.first %>
+    <%= link_to chapter.title, comic_page_side_url(@firstPage, :comic_chapter_id => chapter.id, :number => @firstPage.number ) %>
   </br>
+<% end %>
+<% end %>
+<% if @chapter == nil %>
+  <p> brak rodziałów </p>
 <% end %>
