@@ -1,7 +1,11 @@
 <% if @page.nil? %>
   no page
 <% else %>
+  <%= link_to "next", comic_page_side_path(comic_chapter_id: @page.comic_chapter_id, number: @page.number + 1) %>
+  <%= link_to "preview", comic_page_side_path(comic_chapter_id: @page.comic_chapter_id, number: @page.number - 1) %>
+
   <%= image_tag @page.comicimage.url(:thumb) %>
+
   <%= link_to "next", comic_page_side_path(comic_chapter_id: @page.comic_chapter_id, number: @page.number + 1) %>
   <%= link_to "preview", comic_page_side_path(comic_chapter_id: @page.comic_chapter_id, number: @page.number - 1) %>
 <% end %>
