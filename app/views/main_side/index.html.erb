@@ -1,6 +1,6 @@
 <div class = "container">
   <div class = "comics">
-    <h1>Comics </h1>
+    <h1 class= "main-side">Comics </h1>
     <div class ="row">
       <div class = "column">
         <% @comics.each do |comic| %>
@@ -15,6 +15,7 @@
       <div class = "column">
         <% @comics3.each do |comic| %>
           <%= image_tag comic.comiccover.url(:medium) %>
+        
         <% end %>
       </div>
     </div>
