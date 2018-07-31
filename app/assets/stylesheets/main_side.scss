@@ -35,8 +35,10 @@ div.column img {
 
 }
 
-div.column.img:hover {
-  filter:blur(2px);
+div.column img:hover {
+  filter:blur(1px) sepia(1);
+  -webkit-filter: sepia(1) blur(1px);
+
   display: flex;
   flex-flow: column;
 }
