@@ -1,5 +1,16 @@
-</br>
-<% @comics.each do |comic| %>
-  <%= link_to comic.title, comic_sides_with_title_path(comic, :title => comic.title) %>
-</br>
-<% end %>
+<div class= "container">
+  <div class = "row">
+    <div class = "column">
+    </div>
+     <div class= "column">
+    </br>
+    <% @comics.each do |comic| %>
+      <%= link_to comic.title, comic_sides_with_title_path(comic, :title => comic.title) %>
+    </br>
+    <% end %>
+  </div>
+  <div class="column">
+  </div>
+
+  </div>
+</div>

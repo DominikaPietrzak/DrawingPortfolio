@@ -6,9 +6,11 @@ h1.main-side {
   font-size: 60px;
   line-height: 90%;
   margin-top: 45px;
+  font-weight: 200;
 
 
 }
+
 .container {
 
   text-align: center;
@@ -23,7 +25,26 @@ h1.main-side {
   display: flex;
   flex-wrap: wrap;
   padding: 0 0px;
-  margin: 105px;
+  margin-left:  105px;
+  margin-right: 105px;
+  margin-top: 45px;
+
+
+}
+
+.heading-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0px;
+  margin-left:  105px;
+  margin-right: 105px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: left;
+  color: #3e444c;
+}
+div.heading-row p{
+  font-weight: lighter;
 }
 
 /* Create four equal columns that sits next to each other */
@@ -41,6 +62,7 @@ div.column img {
   margin: none;
   display: flex;
   flex-flow: column;
+  filter:blur(0.5px) grayscale(0.5);
 
 }
 
