@@ -1,3 +1,7 @@
-<% @arts.each do |art| %>
-  <%= image_tag art.imageart.url(:thumb) %>
-<% end %>
+<div class = "arts-side">
+  <div class = "container">
+    <% @arts.each do |art| %>
+      <%= image_tag art.imageart.url(:medium) %>
+    <% end %>
+  </div>
+</div>

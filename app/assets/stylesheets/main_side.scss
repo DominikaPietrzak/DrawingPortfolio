@@ -7,16 +7,14 @@ h1.main-side {
   line-height: 90%;
   margin-top: 45px;
   font-weight: 200;
-
-
 }
+
 
 .container {
-
   text-align: center;
 }
-.comics, .pages, .chapters {
 
+.comics, .pages, .chapters {
   width: 100%;
   margin: 0 auto;
 }
@@ -28,8 +26,6 @@ h1.main-side {
   margin-left:  105px;
   margin-right: 105px;
   margin-top: 45px;
-
-
 }
 
 .heading-row {
@@ -43,6 +39,7 @@ h1.main-side {
   text-align: left;
   color: #3e444c;
 }
+
 div.heading-row p{
   font-weight: lighter;
 }
@@ -62,23 +59,43 @@ div.column img {
   margin: none;
   display: flex;
   flex-flow: column;
-  filter:blur(0.5px) grayscale(0.5);
-
+  filter:blur(0.5px) grayscale(0.6);
+  position: relative;
 }
 
 div.column img:hover {
-
-  filter:blur(1px) sepia(1);
-  -webkit-filter: sepia(1) blur(1px);
+  filter:blur(1px) sepia(3) brightness(50%);
+  -webkit-filter: sepia(1) blur(1px)  brightness(50%);
   display: flex;
   flex-flow: column;
-
 }
 
 .column img {
   margin-top: 0px;
   vertical-align: middle;
 }
+
+.comic-tile {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.comic-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s, visibility .2s;
+}
+
+.comic-tile:hover .comic-title {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {

@@ -1,0 +1,21 @@
+<div class = "arts" >
+  <div class = "row">
+
+    <div class = "column">
+      <% @arts.each do |art| %>
+        <%= image_tag art.imageart.url(:medium) %>
+      <% end %>
+    </div>
+
+    <div class = "column">
+      <% @arts2.each do |art| %>
+        <%= image_tag art.imageart.url(:medium) %>
+      <% end %>
+    </div>
+    <div class = "column">
+      <% @arts3.each do |art| %>
+        <%= image_tag art.imageart.url(:medium) %>
+      <% end %>
+    </div>
+  </div>
+</div>
