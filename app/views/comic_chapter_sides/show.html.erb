@@ -1,2 +1,14 @@
-<%= @chapter.title %>
-<%= image_tag @firstPage.comicimage.url(:medium) %>
+<div class = "single-comic-page">
+  <div class = "container" >
+    <div class = "single-page" >
+      <div class = "row">
+        <div class= "column">
+          <div class = "container-with-text">
+            <%= @chapter.title %></br>
+            <%= image_tag @firstPage.comicimage.url(:medium) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

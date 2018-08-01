@@ -7,7 +7,7 @@
 }
 
 div.default-menu div.row {
-  margin: 30px;
+   margin-bottom: 30px;
 }
 
 a {
@@ -27,7 +27,12 @@ a:hover {
   top: 0;
   z-index: 5;
 }
-
+.left-link {
+  text-align: left;
+}
+.right-link {
+  text-align: right;
+}
 
 
 .sticky {

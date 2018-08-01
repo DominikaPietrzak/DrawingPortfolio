@@ -91,7 +91,9 @@
           <div class = "comic-tile">
             <%= image_tag comic.comiccover.url(:medium) %>
             <div class = "comic-title">
+              <div class = "book-title">
                 <%= comic.title.upcase %>
+              </div>
             </div>
           </div>
           <% end %>
@@ -101,7 +103,9 @@
         <div class = "comic-tile">
           <%= image_tag comic.comiccover.url(:medium) %>
             <div class = "comic-title">
-              <%= comic.title.upcase %>
+              <div class = "book-title">
+                <%= comic.title.upcase %>
+              </div>
             </div>
         </div>
         <% end %>
@@ -111,7 +115,9 @@
         <div class = "comic-tile">
           <%= image_tag comic.comiccover.url(:medium) %>
             <div class = "comic-title">
-              <%= comic.title.upcase %>
+              <div class= "book-title">
+                <%= comic.title.upcase %>
+              </div>
             </div>
         </div>
         <% end %>

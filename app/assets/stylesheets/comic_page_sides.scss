@@ -1,3 +1,14 @@
 // Place all the styles related to the comicPageSides controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.container-with-text {
+  display: flex;
+  padding: 0 0px;
+  margin-left:  105px;
+  margin-right: 105px;
+
+}
+.single-comic-page {
+width: 100%;
+margin: 0 auto;
+}

@@ -59,7 +59,7 @@ div.column img {
   margin: none;
   display: flex;
   flex-flow: column;
-  filter:blur(0.5px) grayscale(0.6);
+  filter:blur(0.5px) grayscale(0.7);
   position: relative;
 }
 
@@ -92,6 +92,7 @@ div.column img:hover {
   font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 3px;
+
 }
 
 .comic-tile:hover .comic-title {
@@ -101,7 +102,7 @@ div.column img:hover {
 
 .book-title{
   font-size: 18px;
-  line-height: 200%;
+  line-height: 100%;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
