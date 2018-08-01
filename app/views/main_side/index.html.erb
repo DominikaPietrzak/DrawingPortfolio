@@ -14,38 +14,58 @@
     <div class= "row">
       <div class= "column">
         <% @chapters.each do |chapter| %>
-          <div class= "comic-tile">
-            <%= image_tag chapter.chaptercover.url(:medium) %>
+        <div class = "comic-tile" >
+            <%= link_to comic_chapter_sides_show_path(chapter) do %>
+                <%= image_tag chapter.chaptercover.url(:medium) %>
+            <% end %>
+
             <div class = "comic-title">
+              <div class= "book-title">
+                <% bookId = chapter.comic_book_id %>
+                <% book = ComicBook.find_by(id: bookId) %>
+                <%= book.title %>
+               </div>
               <%= chapter.title.upcase %>
             </div>
-          </div>
+        </div>
         <% end %>
       </div>
 
       <div class= "column">
         <% @chapters2.each do |chapter| %>
           <div class = "comic-tile" >
+              <%= link_to comic_chapter_sides_show_path(chapter) do %>
+                  <%= image_tag chapter.chaptercover.url(:medium) %>
+              <% end %>
 
-            <%= link_to comic_chapter_sides_show_path(chapter) do %>
-              <%= image_tag chapter.chaptercover.url(:medium) %>
-             <% end %>
-            <div class = "comic-title">
-              <%= chapter.title.upcase %>
-            </div>
+              <div class = "comic-title">
+                <div class= "book-title">
+                  <% bookId = chapter.comic_book_id %>
+                  <% book = ComicBook.find_by(id: bookId) %>
+                  <%= book.title %>
+                 </div>
+                <%= chapter.title.upcase %>
+              </div>
           </div>
         <% end %>
       </div>
 
       <div class= "column">
         <% @chapters3.each do |chapter| %>
-        <div class = "comic-tile">
-          <%= image_tag chapter.chaptercover.url(:medium) %>
-          <div class = "comic-title">
-            <%= chapter.title.upcase %>
-          </div>
-        </div>
+        <div class = "comic-tile" >
+            <%= link_to comic_chapter_sides_show_path(chapter) do %>
+                <%= image_tag chapter.chaptercover.url(:medium) %>
+            <% end %>
 
+            <div class = "comic-title">
+              <div class= "book-title">
+                <% bookId = chapter.comic_book_id %>
+                <% book = ComicBook.find_by(id: bookId) %>
+                <%= book.title %>
+               </div>
+              <%= chapter.title.upcase %>
+            </div>
+        </div>
         <% end %>
       </div>
     </div>
@@ -71,7 +91,7 @@
           <div class = "comic-tile">
             <%= image_tag comic.comiccover.url(:medium) %>
             <div class = "comic-title">
-              <%= comic.title.upcase %>
+                <%= comic.title.upcase %>
             </div>
           </div>
           <% end %>

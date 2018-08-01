@@ -3,9 +3,7 @@
   font-style: normal;
   line-height: 100%;
   overflow: hidden;
-
   width: 100%;
-
 }
 
 div.default-menu div.row {
@@ -13,8 +11,8 @@ div.default-menu div.row {
 }
 
 a {
-    text-decoration: none;
-    color: #020c14;
+  text-decoration: none;
+  color: #020c14;
 }
 
 a:hover {
@@ -25,7 +23,11 @@ a:hover {
 #navbar {
   overflow: hidden;
   background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 5;
 }
+
 
 
 .sticky {

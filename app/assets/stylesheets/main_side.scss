@@ -64,8 +64,8 @@ div.column img {
 }
 
 div.column img:hover {
-  filter:blur(1px) sepia(3) brightness(50%);
-  -webkit-filter: sepia(1) blur(1px)  brightness(50%);
+  filter:blur(1px) grayscale(0.6) brightness(50%);
+  -webkit-filter:  blur(1px) grayscale(0.6)  brightness(50%);
   display: flex;
   flex-flow: column;
 }
@@ -89,6 +89,9 @@ div.column img:hover {
   opacity: 0;
   visibility: hidden;
   transition: opacity .2s, visibility .2s;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .comic-tile:hover .comic-title {
@@ -96,6 +99,10 @@ div.column img:hover {
   opacity: 1;
 }
 
+.book-title{
+  font-size: 18px;
+  line-height: 200%;
+}
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
