@@ -1,17 +1,46 @@
-</br>
-<h1> Wszystkie arty </h1> </br>
-</br>
-<%= render 'art_form' %>
-</br>
-<% @arts.each do |art| %>
-  <%= art.id %>
-  <%= image_tag art.imageart.url(:thumb) %>
-  <%= art.name %>
-  <%= art.tag1 %>
-  <%= art.tag2 %>
-  <%= art.tag3 %>
-  <%= link_to 'Edit', edit_art_path(art) %>
-  <%= link_to 'Show', art_path(art) %>
-  <%= link_to 'Delete', art_path(art), method: :delete %>
-  </br>
-<% end %>
+<div class = "admin-container">
+  <div class = "admin-row">
+    <div class = "admin-column">
+      <div class = "new-art">
+        <h1> Add new Art</h1> </br>
+        <%= render 'art_form' %>
+      </div>
+    </div>
+  </div>
+
+<div class = "admin-row">
+
+  <div class = "admin-column">
+
+    <div class = "art-table-container">
+      <table class = "art-table">
+        <tr>
+          <th>Art id</th>
+          <th>Image</th>
+          <th>Art name   </th>
+          <th>Art tag 1 </th>
+          <th>Art tag 2 </th>
+          <th>Art tag 3 </th>
+          <th>Edit</th>
+          <th>SHow</th>
+          <th>Delete</th>
+        </tr>
+        <% @arts.each do |art| %>
+        <tr>
+        <td>  <%= art.id %> </td>
+        <td>  <%= image_tag art.imageart.url(:thumb) %> </td>
+        <td>  <%= art.name %> </td>
+        <td>  <%= art.tag1 %> </td>
+        <td>  <%= art.tag2 %> </td>
+        <td>  <%= art.tag3 %> </td>
+        <td>  <%= link_to 'Edit', edit_art_path(art) %> </td>
+        <td>  <%= link_to 'Show', art_path(art) %></td>
+        <td>  <%= link_to 'Delete', art_path(art), method: :delete %> </td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+
+</div>
+</div>
