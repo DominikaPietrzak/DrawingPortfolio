@@ -1,3 +1,49 @@
 // Place all the styles related to the ArtSides controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+    box-sizing: border-box;
+}
+
+.art-column {
+  -ms-flex: 33.3%; /* IE10 */
+  flex: 33.3%;
+  max-width: 33.3%;
+  padding: 0 4px ;
+}
+.art-column img {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    vertical-align: middle;
+    width: 100%;
+    filter:blur(0.5px) grayscale(0.5);
+
+}
+.art-row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.arts-side {
+  margin-left: 105px;
+  margin-right: 105px;
+}
+@media screen and (max-width: 800px) {
+    .art-column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+
+@media screen and (max-width: 600px) {
+    .art-column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+
+    }
+  }
+}
