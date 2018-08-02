@@ -4,17 +4,23 @@
       <div class = "art-row">
         <div class = "art-column">
           <% @arts.each do |art| %>
-            <%= image_tag art.imageart.url(:medium) %>
+            <div class = "single-art">
+              <%= image_tag art.imageart.url(:medium) %>
+            </div>
           <% end %>
         </div>
         <div class = "art-column">
           <% @arts.each do |art| %>
-            <%= image_tag art.imageart.url(:medium) %>
+            <div class = "single-art">
+              <%= image_tag art.imageart.url(:medium) %>
+            </div>
           <% end %>
         </div>
         <div class = "art-column">
           <% @arts.each do |art| %>
-            <%= image_tag art.imageart.url(:medium) %>
+            <div class = "single-art">
+              <%= image_tag art.imageart.url(:medium) %>
+            </div>
           <% end %>
         </div>
       </div>

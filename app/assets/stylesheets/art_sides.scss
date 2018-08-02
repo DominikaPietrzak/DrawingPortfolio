@@ -31,6 +31,10 @@
   margin-left: 105px;
   margin-right: 105px;
 }
+.single-art :hover {
+  z-index: 4;
+  width: 140%;
+}
 @media screen and (max-width: 800px) {
     .art-column {
         -ms-flex: 50%;
