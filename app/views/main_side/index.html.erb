@@ -89,7 +89,9 @@
       <div class = "column">
         <% @comics.each do |comic| %>
           <div class = "comic-tile">
-            <%= image_tag comic.comiccover.url(:medium) %>
+            <%= link_to comic_sides_with_title_path(comic, comic.title) do %>
+                  <%= image_tag comic.comiccover.url(:medium) %>
+            <% end %>
             <div class = "comic-title">
               <div class = "book-title">
                 <%= comic.title.upcase %>
@@ -101,7 +103,9 @@
       <div class = "column">
         <% @comics2.each do |comic| %>
         <div class = "comic-tile">
-          <%= image_tag comic.comiccover.url(:medium) %>
+          <%= link_to comic_sides_with_title_path(comic, comic.title) do %>
+                <%= image_tag comic.comiccover.url(:medium) %>
+          <% end %>
             <div class = "comic-title">
               <div class = "book-title">
                 <%= comic.title.upcase %>
@@ -113,7 +117,9 @@
       <div class = "column">
         <% @comics3.each do |comic| %>
         <div class = "comic-tile">
-          <%= image_tag comic.comiccover.url(:medium) %>
+          <%= link_to comic_sides_with_title_path(comic, comic.title) do %>
+                <%= image_tag comic.comiccover.url(:medium) %>
+          <% end %>
             <div class = "comic-title">
               <div class= "book-title">
                 <%= comic.title.upcase %>
