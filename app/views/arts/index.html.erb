@@ -2,7 +2,7 @@
   <div class = "admin-row">
     <div class = "admin-column">
       <div class = "new-art">
-        <h1> Add new Art</h1> </br>
+        <h1> ADD NEW ART</h1>
         <%= render 'art_form' %>
       </div>
     </div>
@@ -27,15 +27,15 @@
         </tr>
         <% @arts.each do |art| %>
         <tr>
-        <td>  <%= art.id %> </td>
-        <td>  <%= image_tag art.imageart.url(:thumb) %> </td>
-        <td>  <%= art.name %> </td>
-        <td>  <%= art.tag1 %> </td>
-        <td>  <%= art.tag2 %> </td>
-        <td>  <%= art.tag3 %> </td>
-        <td>  <%= link_to 'Edit', edit_art_path(art) %> </td>
-        <td>  <%= link_to 'Show', art_path(art) %></td>
-        <td>  <%= link_to 'Delete', art_path(art), method: :delete %> </td>
+          <td>  <%= art.id %> </td>
+          <td>  <%= image_tag art.imageart.url(:thumb) %> </td>
+          <td>  <%= art.name %> </td>
+          <td>  <%= art.tag1 %> </td>
+          <td>  <%= art.tag2 %> </td>
+          <td>  <%= art.tag3 %> </td>
+          <td>  <%= link_to 'Edit', edit_art_path(art) %> </td>
+          <td>  <%= link_to 'Show', art_path(art) %></td>
+          <td>  <%= link_to 'Delete', art_path(art), method: :delete %> </td>
         </tr>
         <% end %>
       </table>
