@@ -1,24 +1,38 @@
-ls<h2> New chapter </h2>
-</br>
-<%= form_for @comic_chapter, html: { multipart: true} do |f| %>
 
-  <%= f.label :title %>
-  <%= f.text_field :title %> </br>
+<div class = "admin-container">
+  <div class = "admin-row">
+    <div class = "admin-column">
+      <div class = "new-chapter">
+        <h1>ADD NEW CHAPTER </h1>
+      </div>
+    </div>
+  </div>
+  <div class = "admin-row">
+    <div class = "admin-column">
+      <%= form_for @comic_chapter, html: { multipart: true} do |f| %>
 
-  <%= f.label :number %>
-  <%= f.text_field :number %></br>
+        <%= f.label :title %>
+        <%= f.text_field :title %> </br>
 
-  <%= f.label :comic_book_title %><span>  </span>
-  <%= f.collection_select :comic_book_id, @comics, :id,:title, include_blank: true %>
+        <%= f.label :number %>
+        <%= f.text_field :number %></br>
 
-  </br>
+        <%= f.label :comic_book_title %><span>  </span>
+        <%= f.collection_select :comic_book_id, @comics, :id,:title, include_blank: true %>
 
-  <%= f.label :cover %>
-  <%= f.file_field :chaptercover %></br>
+        </br>
 
-  <%= f.submit %>
+        <%= f.label :cover %>
+        <%= f.file_field :chaptercover %></br>
 
-<% end %>
+        <%= f.submit %>
 
-</br>
-<%= link_to 'Back', comic_chapters_path %>
+      <% end %>
+    </div>
+  </div>
+  <div class = "admin-row">
+    <div class = "admin-column">
+      <%= link_to 'Back', comic_chapters_path %>
+    </div>
+  </div>
+</div>
