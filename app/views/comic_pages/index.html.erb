@@ -1,20 +1,50 @@
-</br>
-  <%= render 'comic_page_form' %>
-</br>
-<% @pages.each do |page| %>
-  <%= page.id %>
-  <%= page.number %>
-  <%= image_tag page.comicimage.url(:thumb) %>
-  <% chapterId = page.comic_chapter_id %>
-  <% chapter = ComicChapter.find_by(id: chapterId) %>
-  <%= chapter.title %>
-  <% comic = ComicBook.find_by(id: chapter.comic_book_id) %>
-  <%= comic.title %>
-  <%= page.tag1 %>
-  <%= page.tag2 %>
-  <%= page.tag3 %>
-  <%= link_to 'Show', comic_page_path(page) %>
-  <%= link_to 'Edit', edit_comic_page_path(page) %>
-  <%= link_to 'Delete', comic_page_path(page), method: :delete %>
-</br>
-<% end %>
+<div class = "admin-container">
+  <div class = "admin-row">
+    <div class = "admin-column">
+      <div class = "new-comic">
+        <h1>ADD NEW PAGE</h1>
+          <%= render 'comic_page_form' %>
+      </div>
+    </div>
+  </div>
+  <div class = "admin-row">
+    <div class = "admin-column">
+      <div class = "comic-page-table-container">
+        <table class = "comic-page-table">
+          <tr>
+            <th>Page id</th>
+            <th>Page number </th>
+            <th>Page image </th>
+            <th>Chapter title </th>
+            <th>Comic Title </th>
+            <th>Page tag 1 </th>
+            <th>Page tag 2 </th>
+            <th>Page tag 3 </th>
+            <th>Show </th>
+            <th>Edit </th>
+            <th> Delete </th>
+          </tr>
+
+            <% @pages.each do |page| %>
+              <tr>
+                <td><%= page.id %></td>
+                <td><%= page.number %></td>
+                <td><%= image_tag page.comicimage.url(:thumb) %></td>
+                    <% chapterId = page.comic_chapter_id %>
+                    <% chapter = ComicChapter.find_by(id: chapterId) %>
+                <td><%= chapter.title %></td>
+                    <% comic = ComicBook.find_by(id: chapter.comic_book_id) %>
+                <td><%= comic.title %></td>
+                <td><%= page.tag1 %></td>
+                <td><%= page.tag2 %></td>
+                <td><%= page.tag3 %></td>
+                <td><%= link_to 'Show', comic_page_path(page) %></td>
+                <td><%= link_to 'Edit', edit_comic_page_path(page) %></td>
+                <td><%= link_to 'Delete', comic_page_path(page), method: :delete %></td>
+              </tr>
+            <% end %>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>
