@@ -1,15 +1,29 @@
-<% if @chapters.nil? %>
-   <p> brak rodziałów </p>
-<% else %>
-  <% @chapters.each do |chapter| %>
-    <%= chapter.number %>
-    <% pages = ComicPage.where(comic_chapter_id: chapter.id) %>
-    <% @firstPage = pages.first %>
-    <% if @firstPage.nil? %>
-      no pages
-    <% else %>
-      <%= link_to chapter.title, comic_page_side_url(@firstPage, :comic_chapter_id => chapter.id, :number => @firstPage.number ) %>
-    <% end %>
-  </br>
-  <% end %>
-<% end %>
+<div class =  "chapters-in-book">
+  <div class = "row">
+    <div class = "column">
+    </div>
+    <div class = "column">
+        <% if @chapters.nil? %>
+           <p> brak rodziałów </p>
+        <% else %>
+          <% @chapters.each do |chapter| %>
+            <div class= "number-and-comic-title">
+              <%= chapter.number %>
+              <% pages = ComicPage.where(comic_chapter_id: chapter.id) %>
+              <% @firstPage = pages.first %>
+              <% if @firstPage.nil? %>
+                no pages
+              <% else %>
+                <%= link_to chapter.title, comic_page_side_url(@firstPage, :comic_chapter_id => chapter.id, :number => @firstPage.number ) %>
+              <% end %>
+              </br>
+            </div>
+            <% end %>
+
+        <% end %>
+
+    </div>
+    <div class = "column">
+    </div>
+  </div>
+</div>

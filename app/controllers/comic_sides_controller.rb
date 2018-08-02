@@ -7,6 +7,6 @@ class ComicSidesController < ApplicationController
   def show
     @comic = ComicBook.find (params[:id])
 
-    @chapters = ComicChapter.where(comic_book_id: @comic.id)
+    @chapters = ComicChapter.where(comic_book_id: @comic.id).order(:number)
   end
 end

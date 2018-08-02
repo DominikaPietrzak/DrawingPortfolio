@@ -1,11 +1,21 @@
-<% if @page.nil? %>
-  no page
-<% else %>
-  <%= link_to "next", comic_page_side_path(comic_chapter_id: @page.comic_chapter_id, number: @page.number + 1) %>
-  <%= link_to "preview", comic_page_side_path(comic_chapter_id: @page.comic_chapter_id, number: @page.number - 1) %>
+<div class = "page-in-chapter">
+  <div class = "row">
+    <div class = "page-column-left">
+    </div>
+    <div class = "page-column-middle">
+        <% if @page.nil? %>
+          no page
+        <% else %>
+          <%= link_to "next", comic_page_side_path(comic_chapter_id: @page.comic_chapter_id, number: @page.number + 1) %>
+          <%= link_to "preview", comic_page_side_path(comic_chapter_id: @page.comic_chapter_id, number: @page.number - 1) %>
 
-  <%= image_tag @page.comicimage.url(:thumb) %>
+          <%= image_tag @page.comicimage.url(:medium) %>
 
-  <%= link_to "next", comic_page_side_path(comic_chapter_id: @page.comic_chapter_id, number: @page.number + 1) %>
-  <%= link_to "preview", comic_page_side_path(comic_chapter_id: @page.comic_chapter_id, number: @page.number - 1) %>
-<% end %>
+          <%= link_to "next", comic_page_side_path(comic_chapter_id: @page.comic_chapter_id, number: @page.number + 1) %>
+          <%= link_to "preview", comic_page_side_path(comic_chapter_id: @page.comic_chapter_id, number: @page.number - 1) %>
+        <% end %>
+    </div>
+    <div class = "page-column-right">
+    </div>
+  </div>
+</div>
